@@ -29,8 +29,9 @@ const itemSchema = new mongoose.Schema(
     },
     discountPercentage:{
       type:Number,
-      default:"",
-      trim:true,
+      default:0,
+      min: [0, "Discount Percentage cannot be negative"],
+      max: [100, "Discount Percentage cannot exeed 100"],
 
     }
   },

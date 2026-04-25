@@ -62,6 +62,9 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
         name="discountPercentage"
         value={formData.discountPercentage}
         onChange={handleChange}
+        min="0"
+        max="100"
+        placeholder="0"
       />
 
 
