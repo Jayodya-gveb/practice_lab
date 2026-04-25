@@ -22,6 +22,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
     onSubmit({
       ...formData,
       price: Number(formData.price),
+      discountPercentage:Number(formData.discountPercentage)||0
     });
   };
 
@@ -57,7 +58,7 @@ function ItemForm({ initialValues, onSubmit, submitText }) {
       <input name="imageUrl" value={formData.imageUrl} onChange={handleChange} />
 
       <label>Discount Percentage</label>
-      <textarea
+      <input
         type="number"
         name="discountPercentage"
         value={formData.discountPercentage}
